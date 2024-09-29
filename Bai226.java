@@ -33,7 +33,7 @@
 // }
 
 
-// import javax.swing.JOptionPane;
+import javax.swing.JOptionPane;
 public class Bai226{
     public static void main(String[] args){
         String A = JOptionPane.showInputDialog("Nhap a");
