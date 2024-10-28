@@ -1,37 +1,32 @@
-import java.util.ArrayList;
-public class Cart {
-	public static final int MAX_NUMBERS_ORDERED = 20;
-	public int Count_Number;
-	private ArrayList<DigitalVideoDisc> itemsOrdered = new ArrayList<>();
+package lab1;
 
-	void addDigitalVideoDisc(DigitalVideoDisc dvd) {
-		if (Count_Number == MAX_NUMBERS_ORDERED) {
-			System.out.println("The cart is almost full");
-		} else {
-			itemsOrdered.add(dvd);
-			Count_Number++;
-			System.out.println("The disc has been added!");
-		}
-	}	
-	void removeDigitalVideoDisc(int arg) {
-		itemsOrdered.remove(arg);
-		Count_Number--;
-	}
-	float totalCost() {
-		float total = 0;
-		for (DigitalVideoDisc a : itemsOrdered) {
-			total += a.getCost();
-		}
-		return total;
-	}
-	void seeInfo(int index) {
-		DigitalVideoDisc a = itemsOrdered.get(index);
-		System.out.println("DVD so: " + index);
-		System.out.println("Title: " + a.getTitle());
-		System.out.println("Category: " + a.getCategory());
-		System.out.println("Diretor: " + a.getDirector());
-		System.out.println("Length: " + a.getLength());
-		System.out.println("Cost: " + a.getCost());
-		System.out.println("-----------------------------");
-	}
+public class Cart {
+
+    public Cart() {
+        super();
+    }
+
+    public static final int MAX_NUMBER_ORDERED = 20;
+    private DigitalVideoDisc itemsOrdered[] = new DigitalVideoDisc[MAX_NUMBER_ORDERED];
+    private int qtyOrdered = 0;
+
+    // Add a DVD to the cart
+    public void addDigitalVideoDisc(DigitalVideoDisc dvd) {
+        if (qtyOrdered < MAX_NUMBER_ORDERED) {
+            itemsOrdered[qtyOrdered] = dvd;
+            qtyOrdered++;
+            System.out.println("The disc " + dvd.getTitle() + " has been added.");
+        } else {
+            System.out.println("The cart is full, cannot add more items.");
+        }
+    }
+
+    // Calculate total cost of DVDs in the cart
+    public float totalCost() {
+        float total = 0;
+        for (int i = 0; i < qtyOrdered; i++) {
+            total += itemsOrdered[i].getCost();
+        }
+        return total;
+    }
 }
