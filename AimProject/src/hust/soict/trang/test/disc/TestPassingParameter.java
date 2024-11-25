@@ -1,4 +1,4 @@
-package hust.trang.soict.test.disc;
+package hust.soict.trang.test.disc;
 
 import hust.soict.trang.aims.disc.DigitalVideoDisc;
 
