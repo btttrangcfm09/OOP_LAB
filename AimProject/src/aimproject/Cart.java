@@ -69,8 +69,6 @@ public class Cart {
 		}
 		else System.out.println("The cart is almost full.");
 	}
-	
-	
 	public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
 		int xuathien = 0;
 		for(int i = 0; i < qtyOrdered; ++i) {

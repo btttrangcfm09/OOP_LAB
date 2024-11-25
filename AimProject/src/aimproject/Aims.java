@@ -36,18 +36,23 @@ public class Aims {
 				"Science Fiction", "George Luscas", 100, 25.95f);
 		DigitalVideoDisc dvd6 = new DigitalVideoDisc("Aladin 3",
 				"Animation", 20.99f);
-//		DigitalVideoDisc dvList[] = {dvd4,dvd5,dvd6};
-//		anOrder.addDigitalVideoDisc(dvList);
-//		// print the list of video after removing
-//		anOrder.displayDigitalVideoDisc();
+		DigitalVideoDisc dvList[] = {dvd4,dvd5,dvd6};
+		anOrder.addDigitalVideoDisc(dvList);
+		
+		// Test for add arbitrary number of arguments
 		DigitalVideoDisc dvd7 = new DigitalVideoDisc("The Flower 1",
 				"Animation", "Roger Alin", 100, 20.05f);
 		DigitalVideoDisc dvd8 = new DigitalVideoDisc("Start Wars 3", 
 				"Science Fiction", "George Luscas", 101, 25.95f);
 		DigitalVideoDisc dvd9 = new DigitalVideoDisc("Aladin 4",
 				"Animation", 30.99f);
-//		anOrder.addDigitalVideoDisc(dvd7, dvd8,dvd9);
+		anOrder.addDigitalVideoDisc(dvd7, dvd8,dvd9);
 //		anOrder.displayDigitalVideoDisc();
+		// Test for add differing the number of parameters
+		DigitalVideoDisc dvd10 = new DigitalVideoDisc("The Flower 2",
+				"Animation", "Roger Alin", 200, 30.05f);
+		DigitalVideoDisc dvd11 = new DigitalVideoDisc("Start Wars 4", 
+				"Science Fiction", "George Luscas", 300, 60.95f);
 		anOrder.addDigitalVideoDisc(dvd8, dvd9);
 		anOrder.displayDigitalVideoDisc();
 	}
