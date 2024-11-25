@@ -20,13 +20,13 @@ public class DigitalVideoDisc {
 		this.category = category;
 		this.director = director;
 		this.length = length;
+		
 		this.cost = cost;
 	}
 	public DigitalVideoDisc(String title) {
 		super();
 		this.title = title;
 	}
-	
 	private String title;
 	private String category;
 	private String director;
@@ -48,6 +48,16 @@ public class DigitalVideoDisc {
 	}
 	public float getCost() {
 		return cost;
+	}
+
+	@Override
+	public String toString() {
+		return "DigitalVideoDisc [title=" + title + ", category=" + category + ", director=" + director + ", length="
+				+ length + ", cost=" + cost + "]";
+	}
+	// setter
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	
 }
