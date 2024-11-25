@@ -20,6 +20,7 @@ public class DigitalVideoDisc {
 		this.category = category;
 		this.director = director;
 		this.length = length;
+		
 		this.cost = cost;
 	}
 	public DigitalVideoDisc(String title) {
