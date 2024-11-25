@@ -1,7 +1,7 @@
-package hust.soict.trang.aims.test.cart;
+package hust.soict.trang.test.cart;
 
 import hust.soict.trang.aims.cart.Cart;
-import hust.soict.trang.disc.DigitalVideoDisc;
+import hust.soict.trang.aims.disc.DigitalVideoDisc;
 
 public class CartTest {
 
