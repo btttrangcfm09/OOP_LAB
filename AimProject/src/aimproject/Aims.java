@@ -8,26 +8,30 @@ public class Aims {
 		Cart anOrder = new Cart();
 //		
 //		// Create new dvd object and add them to the cart
-//		DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King",
-//				"Animation", "Roger Allers", 87, 19.95f);
-//		anOrder.addDigitalVideoDisc(dvd1);
-//		DigitalVideoDisc dvd2 = new DigitalVideoDisc("Start Wars", 
-//				"Science Fiction", "George Luscas", 87, 24.95f);
-//		anOrder.addDigitalVideoDisc(dvd2);
-//		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin",
-//				"Animation", 18.99f);
-//		anOrder.addDigitalVideoDisc(dvd3);
-//		
-//		//print total cost of the items in the cart
-//		System.out.println("Total Cost is: ");
-//		System.out.println(anOrder.totalCost());
-//		
-//		// remove dvd in the List
-//		anOrder.removeDigitalVideoDisc(dvd3);
-//		
-//		// print the list of video after removing
-//		anOrder.displayDigitalVideoDisc();
-//		System.out.println(anOrder.toString());
+		DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King",
+				"Animation", "Roger Allers", 87, 19.95f);
+		anOrder.addDigitalVideoDisc(dvd1);
+		System.out.println(dvd1.getId());
+		DigitalVideoDisc dvd2 = new DigitalVideoDisc("Start Wars", 
+				"Science Fiction", "George Luscas", 87, 24.95f);
+		anOrder.addDigitalVideoDisc(dvd2);
+		System.out.println(dvd2.getId());
+		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin",
+				"Animation", 18.99f);
+		anOrder.addDigitalVideoDisc(dvd3);
+		System.out.println(dvd3.getId());
+
+		
+		//print total cost of the items in the cart
+		System.out.println("Total Cost is: ");
+		System.out.println(anOrder.totalCost());
+		
+		// remove dvd in the List
+		anOrder.removeDigitalVideoDisc(dvd3);
+		
+		// print the list of video after removing
+		anOrder.displayDigitalVideoDisc();
+		System.out.println(anOrder.toString());
 		
 		// Test for add dvList to DigitalVideoDisc
 		DigitalVideoDisc dvd4 = new DigitalVideoDisc("The Flower",
