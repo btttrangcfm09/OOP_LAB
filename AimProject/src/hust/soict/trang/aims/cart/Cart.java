@@ -2,6 +2,7 @@ package hust.soict.trang.aims.cart;
 
 import hust.soict.trang.disc.DigitalVideoDisc;
 
+
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;
 	private DigitalVideoDisc itemsOrdered[]= new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
@@ -15,6 +16,7 @@ public class Cart {
 		else {
 			System.out.println("The cart is almost full.");
 		}
+		
 	}
 	// 2.1 overloading for parameter is array
 	public void addDigitalVideoDisc(DigitalVideoDisc [] dvList){

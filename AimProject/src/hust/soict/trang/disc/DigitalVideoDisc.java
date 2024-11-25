@@ -16,6 +16,7 @@ public class DigitalVideoDisc {
 		this.cost = cost;
 		this.id = ++nbDigitalVideoDiscs;
 	}
+	
 	public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
 		super();
 		this.title = title;
