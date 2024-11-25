@@ -93,15 +93,23 @@ public class Cart {
 		}
 		return total;
 	}
+	
+	// method to print the list of ordered items of a cart
 	public void displayDigitalVideoDisc() {
+		System.out.println("*********************************CART*********************************");
+		System.out.println("Ordered Items:");
 		for(int i = 0; i < qtyOrdered; ++i) {
-			System.out.println(itemsOrdered[i].toString());
+			System.out.println(i+1+". "+itemsOrdered[i].toString());
 			
 		}
+		float totalcost = totalCost();
+		System.out.println("Total cost: " + "[" + totalcost + "]");
+		System.out.println("************************************************************************");
 	}
 	public void numberOfDisc() {
 		System.out.println(qtyOrdered);
 	}
-
+	
+	// print 
 	
 }
