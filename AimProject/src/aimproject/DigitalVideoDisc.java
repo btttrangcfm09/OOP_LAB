@@ -22,9 +22,9 @@ public class DigitalVideoDisc {
 		this.length = length;
 		this.cost = cost;
 	}
-	public DigitalVideoDisc(String category) {
+	public DigitalVideoDisc(String title) {
 		super();
-		this.category = category;
+		this.title = title;
 	}
 	
 	private String title;
