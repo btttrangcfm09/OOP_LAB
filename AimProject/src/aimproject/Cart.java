@@ -95,7 +95,7 @@ public class Cart {
 	}
 	
 	// method to print the list of ordered items of a cart
-	public void displayDigitalVideoDisc() {
+	public void print() {
 		System.out.println("*********************************CART*********************************");
 		System.out.println("Ordered Items:");
 		for(int i = 0; i < qtyOrdered; ++i) {
