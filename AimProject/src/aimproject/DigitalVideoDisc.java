@@ -57,8 +57,8 @@ public class DigitalVideoDisc {
 
 	@Override
 	public String toString() {
-		return "DigitalVideoDisc [title=" + title + ", category=" + category + ", director=" + director + ", length="
-				+ length + ", cost=" + cost + "]";
+		return "DVD - [" + title + "] - [" + category + "] - [" + director + "] - ["
+				+ length + "]: [" + cost + "]$";
 	}
 	// setter
 	public void setTitle(String title) {
