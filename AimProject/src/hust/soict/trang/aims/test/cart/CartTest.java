@@ -1,4 +1,7 @@
-package aimproject;
+package hust.soict.trang.aims.test.cart;
+
+import hust.soict.trang.aims.cart.Cart;
+import hust.soict.trang.disc.DigitalVideoDisc;
 
 public class CartTest {
 

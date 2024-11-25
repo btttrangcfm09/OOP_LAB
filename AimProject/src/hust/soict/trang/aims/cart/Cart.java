@@ -1,12 +1,14 @@
-package aimproject;
+package hust.soict.trang.aims.cart;
 
-public class Store {
-	public static final int MAX_NUMBERS_ORDERED = 1000;
+import hust.soict.trang.disc.DigitalVideoDisc;
+
+public class Cart {
+	public static final int MAX_NUMBERS_ORDERED = 20;
+	private DigitalVideoDisc itemsOrdered[]= new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
 	int qtyOrdered = 0;
-	DigitalVideoDisc itemsInStore[] = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
-	public void addDVS(DigitalVideoDisc disc) {
+	public void addDigitalVideoDisc(DigitalVideoDisc disc) {
 		if(qtyOrdered < MAX_NUMBERS_ORDERED) {
-			itemsInStore[qtyOrdered] = disc;
+			itemsOrdered[qtyOrdered] = disc;
 			++qtyOrdered;
 			System.out.println("The disc "+disc.getTitle()+" has been added.");
 		}
@@ -15,13 +17,13 @@ public class Store {
 		}
 	}
 	// 2.1 overloading for parameter is array
-	public void addDVD(DigitalVideoDisc [] dvList){
+	public void addDigitalVideoDisc(DigitalVideoDisc [] dvList){
 		int numberDv = dvList.length, index = 0;
 		if(numberDv == 0) {
 			System.out.println("The List is empty.");
 		}
 		while(qtyOrdered < MAX_NUMBERS_ORDERED && index < numberDv) {
-			itemsInStore[qtyOrdered] = dvList[index];
+			itemsOrdered[qtyOrdered] = dvList[index];
 			System.out.println("The disc " + dvList[index].getTitle() + " has been added.");
 			++qtyOrdered;
 			++index;
@@ -31,10 +33,10 @@ public class Store {
 		}
 	}
 	// 2.1 overloading for parameter is arbitrary number
-	public void addDVD(DigitalVideoDisc disc1,DigitalVideoDisc ...disc) {
+	public void addDigitalVideoDisc(DigitalVideoDisc disc1,DigitalVideoDisc ...disc) {
 		// when add disc1
 		if(qtyOrdered < MAX_NUMBERS_ORDERED) {
-			itemsInStore[qtyOrdered] = disc1;
+			itemsOrdered[qtyOrdered] = disc1;
 			System.out.println("The disc " + disc1.getTitle() + " has been added.");
 			++qtyOrdered;
 		}
@@ -45,7 +47,7 @@ public class Store {
 			System.out.println("The List is empty.");
 		}
 		while(qtyOrdered < MAX_NUMBERS_ORDERED && index < numberDv) {
-			itemsInStore[qtyOrdered] = disc[index];
+			itemsOrdered[qtyOrdered] = disc[index];
 			System.out.println("The disc " + disc[index].getTitle() + " has been added.");
 			++qtyOrdered;
 			++index;
@@ -54,15 +56,30 @@ public class Store {
 			System.out.println("The cart is almost full.");
 		}
 	}
-	public void removeDVD(DigitalVideoDisc disc) {
+	//2.2 Overloading by differing the number of parameters
+	public void addDigitalVideoDisc(DigitalVideoDisc dvd1,DigitalVideoDisc dvd2) {
+		if(qtyOrdered < MAX_NUMBERS_ORDERED) {
+			itemsOrdered[qtyOrdered] = dvd1;
+			System.out.println("The disc " + dvd1.getTitle() + " has been added.");
+			++qtyOrdered;
+		}
+		else System.out.println("The cart is almost full.");
+		if(qtyOrdered < MAX_NUMBERS_ORDERED) {
+			itemsOrdered[qtyOrdered] = dvd2;
+			System.out.println("The disc " + dvd2.getTitle() + " has been added.");
+			++qtyOrdered;
+		}
+		else System.out.println("The cart is almost full.");
+	}
+	public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
 		int xuathien = 0;
 		for(int i = 0; i < qtyOrdered; ++i) {
-			if(itemsInStore[i].equals(disc)) {
+			if(itemsOrdered[i].equals(disc)) {
 				int j = i;
 				for(j = i; j < qtyOrdered - 1; ++j) {
-					itemsInStore[j] = itemsInStore[j+1];
+					itemsOrdered[j] = itemsOrdered[j+1];
 				}
-				itemsInStore[j] = null;
+				itemsOrdered[j] = null;
 				System.out.println("The disc "+disc.getTitle()+" has been removed.");
 				xuathien = 1;
 				--qtyOrdered;
@@ -71,16 +88,30 @@ public class Store {
 		}
 		if(xuathien == 0) System.out.println("The disc hasn't been exsited in the List.");
 	}
-	// method to print the list of ordered items of a store
+	public float totalCost() {
+		float total = 0;
+		for(int i = 0; i < qtyOrdered; ++i) {
+			total += itemsOrdered[i].getCost();
+		}
+		return total;
+	}
+	
+	// method to print the list of ordered items of a cart
 	public void print() {
 		System.out.println("*********************************CART*********************************");
 		System.out.println("Ordered Items:");
 		for(int i = 0; i < qtyOrdered; ++i) {
-			System.out.println(i+1+". "+itemsInStore[i].toString());
+			System.out.println(i+1+". "+itemsOrdered[i].toString());
 			
 		}
-//		float totalcost = totalCost();
-//		System.out.println("Total cost: " + "[" + totalcost + "]");
+		float totalcost = totalCost();
+		System.out.println("Total cost: " + "[" + totalcost + "]");
 		System.out.println("************************************************************************");
-	}	
+	}
+	public void numberOfDisc() {
+		System.out.println(qtyOrdered);
+	}
+	
+	// print 
+	
 }
