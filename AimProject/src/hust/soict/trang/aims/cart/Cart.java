@@ -112,6 +112,28 @@ public class Cart {
 		System.out.println(qtyOrdered);
 	}
 	
-	// print 
-	
+	// search item by id
+	public void searchById(int ID) {
+		boolean check = false;
+		for(int i = 0; i < qtyOrdered; ++i) {
+			if(ID == itemsOrdered[i].getId()) {
+				check = true;
+				System.out.println(ID + " " + itemsOrdered[i].toString());
+			}
+		}
+		if(check == false) {
+			System.out.println("Not found!");
+		}
+	}
+	// search item by title
+	public void searchByTitle(String title) {
+		boolean check = false;
+		for(int i = 0; i < qtyOrdered; ++i) {
+			if(itemsOrdered[i].isMatch(title)) {
+				check = true;
+				System.out.println(itemsOrdered[i].getId() + " " + itemsOrdered[i].toString());
+			}
+		}
+		if(check == false) System.out.println("Not found!");
+	}
 }
