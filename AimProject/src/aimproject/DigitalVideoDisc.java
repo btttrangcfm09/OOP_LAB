@@ -70,5 +70,15 @@ public class DigitalVideoDisc {
 	public int getId() {
 		return id;
 	}
-	
+	public boolean isMatch(String t) {
+		for(int i = 0; i < t.length(); ++i) {
+			char c = t.charAt(i);
+			char c1 = Character.toLowerCase(c);
+			char c2 = Character.toUpperCase(c);
+			if(title.indexOf(c1)!=-1 || title.indexOf(c2) != -1) {
+				return true;
+			}
+		}
+		return false;
+	}
 }

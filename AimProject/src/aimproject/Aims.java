@@ -30,7 +30,7 @@ public class Aims {
 		anOrder.removeDigitalVideoDisc(dvd3);
 		
 		// print the list of video after removing
-		anOrder.displayDigitalVideoDisc();
+		anOrder.print();
 		System.out.println(anOrder.toString());
 		
 		// Test for add dvList to DigitalVideoDisc
@@ -58,7 +58,7 @@ public class Aims {
 		DigitalVideoDisc dvd11 = new DigitalVideoDisc("Start Wars 4", 
 				"Science Fiction", "George Luscas", 300, 60.95f);
 		anOrder.addDigitalVideoDisc(dvd8, dvd9);
-		anOrder.displayDigitalVideoDisc();
+		anOrder.print();
 	}
 
 }
