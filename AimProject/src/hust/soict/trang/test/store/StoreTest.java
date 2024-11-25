@@ -1,7 +1,7 @@
-package hust.soict.trang.aims.test.store;
+package hust.soict.trang.test.store;
 
+import hust.soict.trang.aims.disc.DigitalVideoDisc;
 import hust.soict.trang.aims.store.Store;
-import hust.soict.trang.disc.DigitalVideoDisc;
 
 public class StoreTest {
 

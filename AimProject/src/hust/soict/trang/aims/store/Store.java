@@ -1,6 +1,6 @@
 package hust.soict.trang.aims.store;
 
-import hust.soict.trang.disc.DigitalVideoDisc;
+import hust.soict.trang.aims.disc.DigitalVideoDisc;
 
 public class Store {
 	public static final int MAX_NUMBERS_ORDERED = 1000;
