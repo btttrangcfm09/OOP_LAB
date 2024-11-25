@@ -49,6 +49,11 @@ public class DigitalVideoDisc {
 	public float getCost() {
 		return cost;
 	}
-
+	@Override
+	public String toString() {
+		return "DigitalVideoDisc [title=" + title + ", category=" + category + ", director=" + director + ", length="
+				+ length + ", cost=" + cost + "]";
+	}
+	
 	
 }

@@ -1,7 +1,5 @@
 package aimproject;
 
-import java.util.Arrays;
-
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;
 	private DigitalVideoDisc itemsOrdered[]= new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
@@ -16,6 +14,63 @@ public class Cart {
 			System.out.println("The cart is almost full.");
 		}
 	}
+	// 2.1 overloading for parameter is array
+	public void addDigitalVideoDisc(DigitalVideoDisc [] dvList){
+		int numberDv = dvList.length, index = 0;
+		if(numberDv == 0) {
+			System.out.println("The List is empty.");
+		}
+		while(qtyOrdered < MAX_NUMBERS_ORDERED && index < numberDv) {
+			itemsOrdered[qtyOrdered] = dvList[index];
+			System.out.println("The disc " + dvList[index].getTitle() + " has been added.");
+			++qtyOrdered;
+			++index;
+		}
+		if(qtyOrdered == MAX_NUMBERS_ORDERED && index < numberDv) {
+			System.out.println("The cart is almost full.");
+		}
+	}
+	// 2.1 overloading for parameter is arbitrary number
+	public void addDigitalVideoDisc(DigitalVideoDisc disc1,DigitalVideoDisc ...disc) {
+		// when add disc1
+		if(qtyOrdered < MAX_NUMBERS_ORDERED) {
+			itemsOrdered[qtyOrdered] = disc1;
+			System.out.println("The disc " + disc1.getTitle() + " has been added.");
+			++qtyOrdered;
+		}
+		else System.out.println("The cart is almost full.");
+		// when add Disc List
+		int numberDv = disc.length, index = 0;
+		if(numberDv == 0) {
+			System.out.println("The List is empty.");
+		}
+		while(qtyOrdered < MAX_NUMBERS_ORDERED && index < numberDv) {
+			itemsOrdered[qtyOrdered] = disc[index];
+			System.out.println("The disc " + disc[index].getTitle() + " has been added.");
+			++qtyOrdered;
+			++index;
+		}
+		if(qtyOrdered == MAX_NUMBERS_ORDERED && index < numberDv) {
+			System.out.println("The cart is almost full.");
+		}
+	}
+	//2.2 Overloading by differing the number of parameters
+	public void addDigitalVideoDisc(DigitalVideoDisc dvd1,DigitalVideoDisc dvd2) {
+		if(qtyOrdered < MAX_NUMBERS_ORDERED) {
+			itemsOrdered[qtyOrdered] = dvd1;
+			System.out.println("The disc " + dvd1.getTitle() + " has been added.");
+			++qtyOrdered;
+		}
+		else System.out.println("The cart is almost full.");
+		if(qtyOrdered < MAX_NUMBERS_ORDERED) {
+			itemsOrdered[qtyOrdered] = dvd2;
+			System.out.println("The disc " + dvd2.getTitle() + " has been added.");
+			++qtyOrdered;
+		}
+		else System.out.println("The cart is almost full.");
+	}
+	
+	
 	public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
 		int xuathien = 0;
 		for(int i = 0; i < qtyOrdered; ++i) {
@@ -41,21 +96,13 @@ public class Cart {
 		return total;
 	}
 	public void displayDigitalVideoDisc() {
-		System.out.println("STT:"+"\t\t"+
-				           "Title:"+"\t\t\t"+
-				           "Category:"+"\t\t"+
-				           "Director:"+"\t\t"+
-				           "Length:"+"\t\t"+
-				           "Cost:"+"\n");
 		for(int i = 0; i < qtyOrdered; ++i) {
-			System.out.println(i+1+"\t\t"+
-		                       itemsOrdered[i].getTitle()+"\t\t"+
-					           itemsOrdered[i].getCategory()+"\t\t"+
-					           itemsOrdered[i].getDirector()+"\t\t"+
-					           itemsOrdered[i].getLength()+"\t\t"+
-					           itemsOrdered[i].getCost()+'\n');
+			System.out.println(itemsOrdered[i].toString());
 			
 		}
+	}
+	public void numberOfDisc() {
+		System.out.println(qtyOrdered);
 	}
 
 	
