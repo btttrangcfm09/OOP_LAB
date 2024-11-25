@@ -1,4 +1,4 @@
-package aimproject;
+package hust.soict.trang.aims.disc;
 
 public class DigitalVideoDisc {
 	public DigitalVideoDisc(String title, String category, String director, float cost) {
@@ -16,6 +16,7 @@ public class DigitalVideoDisc {
 		this.cost = cost;
 		this.id = ++nbDigitalVideoDiscs;
 	}
+	
 	public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
 		super();
 		this.title = title;
@@ -70,5 +71,15 @@ public class DigitalVideoDisc {
 	public int getId() {
 		return id;
 	}
-	
+	public boolean isMatch(String t) {
+		for(int i = 0; i < t.length(); ++i) {
+			char c = t.charAt(i);
+			char c1 = Character.toLowerCase(c);
+			char c2 = Character.toUpperCase(c);
+			if(title.indexOf(c1)!=-1 || title.indexOf(c2) != -1) {
+				return true;
+			}
+		}
+		return false;
+	}
 }

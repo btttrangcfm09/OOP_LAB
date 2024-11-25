@@ -1,4 +1,7 @@
-package aimproject;
+package hust.soict.trang.test.disc;
+
+import hust.soict.trang.aims.disc.DigitalVideoDisc;
+
 class Wrapper {
     DigitalVideoDisc value;
 
@@ -6,6 +9,7 @@ class Wrapper {
         this.value = value;
     }
 }
+
 
 
 public class TestPassingParameter {
