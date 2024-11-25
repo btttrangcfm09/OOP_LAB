@@ -1,4 +1,4 @@
-package aimproject;
+package hust.soict.trang.disc;
 
 public class DigitalVideoDisc {
 	public DigitalVideoDisc(String title, String category, String director, float cost) {

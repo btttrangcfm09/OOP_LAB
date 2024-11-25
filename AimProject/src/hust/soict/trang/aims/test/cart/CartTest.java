@@ -1,4 +1,7 @@
-package aimproject;
+package hust.soict.trang.aims.test.cart;
+
+import hust.soict.trang.aims.cart.Cart;
+import hust.soict.trang.disc.DigitalVideoDisc;
 
 public class CartTest {
 
@@ -19,11 +22,7 @@ public class CartTest {
 		cart.addDigitalVideoDisc(dvd3);
 		
 		// Test the print method
-//		cart.print();
-		
-		// To-do: Test the search methods here
-		cart.searchById(0);
-		cart.searchByTitle("1abc");
+		cart.print();
 	}
 
 }

@@ -1,4 +1,6 @@
-package aimproject;
+package hust.soict.trang.aims.cart;
+
+import hust.soict.trang.disc.DigitalVideoDisc;
 
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;
@@ -123,7 +125,6 @@ public class Cart {
 			System.out.println("Not found!");
 		}
 	}
-	
 	// search item by title
 	public void searchByTitle(String title) {
 		boolean check = false;
