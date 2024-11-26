@@ -9,9 +9,6 @@ class Wrapper {
         this.value = value;
     }
 }
-
-
-
 public class TestPassingParameter {
 
 	public static void main(String[] args) {
@@ -30,8 +27,8 @@ public class TestPassingParameter {
 		System.out.println("jungle dvd title: " + wrapper1.value.getTitle());
 		System.out.println("cinderella dvd title: " + wrapper2.value.getTitle());
 		
-		changeTitle(jungleDVD, cinderellaDVD.getTitle());
-		System.out.println("jungle dvd title: " + jungleDVD.getTitle());
+//		changeTitle(jungleDVD, cinderellaDVD.getTitle());
+//		System.out.println("jungle dvd title: " + jungleDVD.getTitle());
 		
 		
 		
