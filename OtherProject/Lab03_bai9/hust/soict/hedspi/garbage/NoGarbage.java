@@ -20,11 +20,11 @@ public class NoGarbage {
         }
         
         startTime = System.currentTimeMillis();
-        String outputString = "";
-//        StringBuilder outpStringBuilder = new StringBuilder();
+//        String outputString = "";
+        StringBuilder outpStringBuilder = new StringBuilder();
         for (byte b : inputBytes) {
-        	outputString += (char)b;
-//            outpStringBuilder.append((char)b);
+//        	outputString += (char)b;
+            outpStringBuilder.append((char)b);
         }
         endTime = System.currentTimeMillis();
         System.out.println(endTime - startTime);
