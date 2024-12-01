@@ -1,6 +1,26 @@
 package hust.soict.trang.aims.media;
 
 public abstract class Media {
+	public Media(String title, String category, float cost) {
+		super();
+		this.title = title;
+		this.category = category;
+		this.cost = cost;
+	}
+	public Media(String title, String category) {
+		super();
+		this.title = title;
+		this.category = category;
+	}
+	public Media(String title, float cost) {
+		super();
+		this.title = title;
+		this.cost = cost;
+	}
+	public Media(String title) {
+		super();
+		this.title = title;
+	}
 	int id;
 	String title;
 	String category;
