@@ -92,6 +92,9 @@ public class CompactDisc extends Disc implements Playable{
 	public void play(CompactDisc CD) {
 		System.out.println("Playing CompactDisc: " + CD.getTitle());
 		System.out.println("CompactDisc length: " + CD.getLength());
+		if(CD.getLength() == 0) {
+			System.out.println("The CD of that track cannot be played.");
+		}
 	}
 	public void play() {
 		for(Track track:tracks) {
