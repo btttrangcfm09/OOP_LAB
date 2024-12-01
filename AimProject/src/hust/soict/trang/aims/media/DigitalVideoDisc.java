@@ -15,11 +15,27 @@ public class DigitalVideoDisc extends Disc implements Playable{
 		super(title,category,director,length,cost);
 		this.id = ++nbDigitalVideoDiscs;
 	}
+	public DigitalVideoDisc(String title, String category, int length,float cost) {
+		super(title,category,length,cost);
+		this.id = ++nbDigitalVideoDiscs;
+	}
 	public DigitalVideoDisc(String title) {
 		super(title);
 		this.id = ++ nbDigitalVideoDiscs;
 	}
-	
+	public DigitalVideoDisc(String title, String category) {
+		super(title,category);
+		this.id = ++ nbDigitalVideoDiscs;
+	}
+	public DigitalVideoDisc(String title, float cost) {
+		super(title,cost);
+		this.id = ++ nbDigitalVideoDiscs;
+	}
+	public DigitalVideoDisc(String title,String category,String director) {
+		super(title,category,director);
+		this.id = ++ nbDigitalVideoDiscs;
+	}
+	// variable
 	private static int nbDigitalVideoDiscs = 0;	
 	
 	// getter
@@ -38,17 +54,6 @@ public class DigitalVideoDisc extends Disc implements Playable{
 
 	public int getId() {
 		return id;
-	}
-	public boolean isMatch(String t) {
-		for(int i = 0; i < t.length(); ++i) {
-			char c = t.charAt(i);
-			char c1 = Character.toLowerCase(c);
-			char c2 = Character.toUpperCase(c);
-			if(title.indexOf(c1)!=-1 || title.indexOf(c2) != -1) {
-				return true;
-			}
-		}
-		return false;
 	}
 	
 	// implement play()
