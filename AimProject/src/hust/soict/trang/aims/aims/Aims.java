@@ -1,7 +1,7 @@
 package hust.soict.trang.aims.aims;
 
 import hust.soict.trang.aims.cart.Cart;
-import hust.soict.trang.aims.disc.DigitalVideoDisc;
+import hust.soict.trang.aims.media.DigitalVideoDisc;
 
 public class Aims {
 
