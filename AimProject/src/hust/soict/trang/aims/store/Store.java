@@ -1,6 +1,6 @@
 package hust.soict.trang.aims.store;
 
-import hust.soict.trang.aims.disc.DigitalVideoDisc;
+import hust.soict.trang.aims.media.DigitalVideoDisc;
 
 
 public class Store {

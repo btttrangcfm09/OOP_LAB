@@ -1,6 +1,6 @@
 package hust.soict.trang.aims.cart;
 
-import hust.soict.trang.aims.disc.DigitalVideoDisc;
+import hust.soict.trang.aims.media.DigitalVideoDisc;
 
 
 public class Cart {

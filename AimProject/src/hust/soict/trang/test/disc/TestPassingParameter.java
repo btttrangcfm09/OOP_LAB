@@ -1,6 +1,6 @@
 package hust.soict.trang.test.disc;
 
-import hust.soict.trang.aims.disc.DigitalVideoDisc;
+import hust.soict.trang.aims.media.DigitalVideoDisc;
 
 class Wrapper {
     DigitalVideoDisc value;
