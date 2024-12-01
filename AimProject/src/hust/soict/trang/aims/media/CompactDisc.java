@@ -3,31 +3,55 @@ import java.util.ArrayList;
 
 public class CompactDisc extends Disc implements Playable{
 	// constructors
-	public CompactDisc(String title, String category, String artist, float cost) {
-		super(title,category,cost);	
-		this.artist = artist;
+	public CompactDisc(String title, String category, String director, float cost) {
+		super(title,category,director,cost);
+		this.id = ++nbCompactDisc;
 	}
 	public CompactDisc(String title, String category, float cost) {
 		super(title,category,cost);
+		this.id = ++nbCompactDisc;
 	}
 	
-	public CompactDisc(String title, String category, String artist, int length, float cost) {
+	public CompactDisc(String title, String category, String director, int length, float cost) {
+		super(title,category,director,length,cost);
+		this.id = ++nbCompactDisc;
+	}
+	public CompactDisc(String title, String category, int length,float cost) {
 		super(title,category,length,cost);
-		this.artist = artist;
+		this.id = ++nbCompactDisc;
 	}
 	public CompactDisc(String title) {
 		super(title);
+		this.id = ++ nbCompactDisc;
 	}
-	public CompactDisc(String title, String category, String director, String artist,float cost ) {
-		super(title,category,director,cost);	
+	public CompactDisc(String title, String category) {
+		super(title,category);
+		this.id = ++ nbCompactDisc;
+	}
+	public CompactDisc(String title, float cost) {
+		super(title,cost);
+		this.id = ++ nbCompactDisc;
+	}
+	public CompactDisc(String title,String category,String director) {
+		super(title,category,director);
+		this.id = ++ nbCompactDisc;
+	}
+	public CompactDisc(String title,String category,String director,String artist) {
+		super(title,category,director);
 		this.artist = artist;
+		this.id = ++ nbCompactDisc;
 	}
-	
-	public CompactDisc(String title, String category, String director, String artist, int length, float cost) {
+	public CompactDisc(String title, String category, String director, String artist,int length, float cost) {
 		super(title,category,director,length,cost);
 		this.artist = artist;
+		this.id = ++nbCompactDisc;
 	}
-	
+	public CompactDisc(String title, String category, float cost, String artist) {
+		super(title,category,cost);
+		this.artist = artist;
+		this.id = ++nbCompactDisc;
+	}
+	private static int nbCompactDisc = 0;
 	private String artist;
 	private ArrayList<Track> tracks = new ArrayList<Track>();
 	// getter
