@@ -57,4 +57,9 @@ public class Book extends Media{
 		}
 		System.out.println("This "+authorName + " has not been exsited!");
 	}
+	@Override
+	public String toString() {
+		return "Book - [" + this.id + "] - [" + this.title + "] - [" + this.category + "] - ["
+				+ this.author + "]: [" + this.cost + "]$";
+	}
 }
