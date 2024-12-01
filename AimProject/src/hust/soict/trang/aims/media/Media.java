@@ -60,4 +60,13 @@ public abstract class Media {
 		}
 		return false;
 	}
+	
+	// override equals
+	@Override
+	public boolean equals(Object o) {
+		if(!(o instanceof Media)) return false;
+		Media media = (Media)o;
+		if(media.getTitle() == this.getTitle()) return true;
+		else return false;
+	}
 }
