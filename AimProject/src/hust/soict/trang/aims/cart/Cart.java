@@ -2,7 +2,7 @@ package hust.soict.trang.aims.cart;
 
 import java.util.ArrayList;
 import java.util.Collections;
-
+import hust.soict.trang.aims.media.DigitalVideoDisc;
 import hust.soict.trang.aims.media.Media;
 
 public class Cart {
@@ -159,6 +159,14 @@ public class Cart {
 		}
 		if(check == false) System.out.println("Not found!");
 	}
+	public boolean checkDvd(ArrayList<Media> item) {
+		for(Media m:item) {
+			if(!(m instanceof DigitalVideoDisc)) {
+				return false;
+			}
+		}
+		return true;
+	}
 	// Sort by CostTiltle
 	public void sortByCostTitle(){
 		Collections.sort(itemOrdered,Media.COMPARE_BY_COST_TITLE);
@@ -166,7 +174,6 @@ public class Cart {
 			System.out.println(media.toString());
 		}
 	}
-	// Sort by TitleCost
 	public void sortByTitleCost(){
 		Collections.sort(itemOrdered,Media.COMPARE_BY_TITLE_COST);
 		for(Media media : itemOrdered) {

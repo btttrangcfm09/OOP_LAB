@@ -17,13 +17,13 @@ public class CartTest {
 		// Create new dvd object and add them to the cart
 		DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King",
 				"Animation", "Roger Allers", 87, 19.95f);
-		cart.addMedia(dvd1);
+//		cart.addMedia(dvd1);
 		DigitalVideoDisc dvd2 = new DigitalVideoDisc("Start Wars", 
 				"Science Fiction", "George Luscas", 87, 24.95f);
-		cart.addMedia(dvd2);
+//		cart.addMedia(dvd2);
 		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin",
 				"Animation", 18.99f);
-		cart.addMedia(dvd3);
+//		cart.addMedia(dvd3);
 //		
 //		// Test the print method
 //		cart.print();
@@ -40,7 +40,7 @@ public class CartTest {
 		// create some media 
 		DigitalVideoDisc dvd5 = new DigitalVideoDisc("The Lion King 3",
 				"Animation", "Roger Allers", 100, 30.95f);
-		cart.addMedia(dvd5);
+//		cart.addMedia(dvd5);
 //		CompactDisc CD1 = new CompactDisc("The label", "music", 30.5f);
 //		mediae.add(CD1);
 //		Book book1 = new Book("And then there were none.", "Ditective", 30f);
@@ -52,11 +52,11 @@ public class CartTest {
 		cart.addMedia(dvd4);
 		DigitalVideoDisc dvd6 = new DigitalVideoDisc("The Table 2", "Animation", "Roger Allers", 100, 40.95f);
 		cart.addMedia(dvd6);
-//		ArrayList<Media> sort = cart.sortByCostTitle();
 //		for(Media dvd:sort) {
 //			dvd.toString();
 //		}
-		cart.sortByCostTitle();
+//		cart.sortByCostTitle();
+	
 	}
 
 }
