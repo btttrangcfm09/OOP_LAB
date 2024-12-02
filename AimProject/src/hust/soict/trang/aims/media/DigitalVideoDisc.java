@@ -1,20 +1,6 @@
 package hust.soict.trang.aims.media;
 
-public class DigitalVideoDisc extends Disc implements Playable, Comparable<DigitalVideoDisc>{
-	// Comparable title descent, length decent, cost increase
-	public int compareTo(DigitalVideoDisc dvd) {
-		if(this.title.compareTo(dvd.getTitle())<0) return -1;
-		else if (this.title.compareTo(dvd.getTitle())>0) return 1;
-		else {
-			if(this.length < dvd.getLength()) return -1;
-			else if(this.length > dvd.getLength()) return 1;
-			else {
-				if(this.cost > dvd.getCost()) return -1;
-				else if (this.cost < dvd.getCost()) return 1;
-				else return 0;
-			}
-		}
-	}
+public class DigitalVideoDisc extends Disc implements Playable{
 	//Override contructor
 	public DigitalVideoDisc(String title, String category, String director, float cost) {
 		super(title,category,director,cost);
