@@ -1,6 +1,11 @@
 package hust.soict.trang.aims.media;
 
+import java.util.Comparator;
+
 public abstract class Media {
+	// compare
+	public static final Comparator<Media> COMPARE_BY_TITLE_COST = new MediaComparatorByTiltleCost();
+	public static final Comparator<Media> COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();	
 	public Media(String title, String category, float cost) {
 		super();
 		this.title = title;

@@ -1,9 +1,9 @@
 package hust.soict.trang.aims.cart;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import hust.soict.trang.aims.media.Media;
-
 
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;
@@ -158,5 +158,19 @@ public class Cart {
 			}
 		}
 		if(check == false) System.out.println("Not found!");
+	}
+	// Sort by CostTiltle
+	public void sortByCostTitle(){
+		Collections.sort(itemOrdered,Media.COMPARE_BY_COST_TITLE);
+		for(Media media : itemOrdered) {
+			System.out.println(media.toString());
+		}
+	}
+	// Sort by TitleCost
+	public void sortByTitleCost(){
+		Collections.sort(itemOrdered,Media.COMPARE_BY_TITLE_COST);
+		for(Media media : itemOrdered) {
+			System.out.println(media.toString());
+		}
 	}
 }
