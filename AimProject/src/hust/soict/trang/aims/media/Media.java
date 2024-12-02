@@ -1,6 +1,31 @@
 package hust.soict.trang.aims.media;
 
-public abstract class Media {
+import java.util.Comparator;
+
+public abstract class Media{
+	// compare
+	public static final Comparator<Media> COMPARE_BY_TITLE_COST = new MediaComparatorByTiltleCost();
+	public static final Comparator<Media> COMPARE_BY_COST_TITLE = new MediaComparatorByCostTitle();	
+	public Media(String title, String category, float cost) {
+		super();
+		this.title = title;
+		this.category = category;
+		this.cost = cost;
+	}
+	public Media(String title, String category) {
+		super();
+		this.title = title;
+		this.category = category;
+	}
+	public Media(String title, float cost) {
+		super();
+		this.title = title;
+		this.cost = cost;
+	}
+	public Media(String title) {
+		super();
+		this.title = title;
+	}
 	int id;
 	String title;
 	String category;
@@ -40,4 +65,14 @@ public abstract class Media {
 		}
 		return false;
 	}
+	
+	// override equals
+	@Override
+	public boolean equals(Object o) {
+		if(!(o instanceof Media)) return false;
+		Media media = (Media)o;
+		if(media.getTitle() == this.getTitle()) return true;
+		else return false;
+	}
+
 }
