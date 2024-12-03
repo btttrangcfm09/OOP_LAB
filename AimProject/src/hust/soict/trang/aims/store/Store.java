@@ -1,8 +1,9 @@
 package hust.soict.trang.aims.store;
 
-import java.util.ArrayList;
+import java.util.*;
 
-import hust.soict.trang.aims.media.Media;
+import hust.soict.trang.aims.media.DigitalVideoDisc;
+import hust.soict.trang.aims.media.*;
 
 
 public class Store {
@@ -68,8 +69,8 @@ public class Store {
 	}
 	// method to print the list of ordered items of a store
 	public void print() {
-		System.out.println("*********************************CART*********************************");
-		System.out.println("Ordered Items:");
+		System.out.println("*********************************STORE*********************************");
+		System.out.println("Store Items:");
 		for(int i = 0; i < itemsInStore.size(); ++i) {
 			System.out.println(i+1+". "+itemsInStore.get(i).toString());
 			
@@ -78,4 +79,13 @@ public class Store {
 //		System.out.println("Total cost: " + "[" + totalcost + "]");
 		System.out.println("************************************************************************");
 	}	
+	public Media searchByTitle(String title) {
+        for (Media media : itemsInStore) {
+            if (title.equals(media.getTitle())) {
+                return media;
+            }
+        }
+        return null;
+    }
+
 }
