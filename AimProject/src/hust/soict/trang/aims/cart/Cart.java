@@ -180,4 +180,20 @@ public class Cart {
 			System.out.println(media.toString());
 		}
 	}
+	// get Number ItemsOrdered
+	public int getNumberItemsOrdered() {
+		return itemOrdered.size();
+	}
+	public void clear() {
+		itemOrdered.clear();
+	}
+	public Media search(String title) {
+        for (Media media : itemOrdered) {
+            if (title.equals(media.getTitle())) {
+                return media;
+            }
+        }
+        return null;
+    }
+
 }

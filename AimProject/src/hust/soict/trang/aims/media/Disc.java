@@ -43,8 +43,4 @@ public class Disc extends Media{
 	public int getLength() {
 		return length;
 	}
-
-	
-	
-	
 }

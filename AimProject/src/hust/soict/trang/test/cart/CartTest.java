@@ -36,25 +36,18 @@ public class CartTest {
 //		DigitalVideoDisc dvd4 = new DigitalVideoDisc("The Lion King");
 //		cart.addMedia(dvd4);
 		// Test for polymorphism
-//		ArrayList<Media> mediae = new ArrayList<Media>();
+		ArrayList<Media> mediae = new ArrayList<Media>();
 		// create some media 
 		DigitalVideoDisc dvd5 = new DigitalVideoDisc("The Lion King 3",
 				"Animation", "Roger Allers", 100, 30.95f);
-//		cart.addMedia(dvd5);
-//		CompactDisc CD1 = new CompactDisc("The label", "music", 30.5f);
-//		mediae.add(CD1);
-//		Book book1 = new Book("And then there were none.", "Ditective", 30f);
-//		mediae.add(book1);
-//		for(Media m:mediae) {
-//			System.out.println(m.toString());
-//		}
-		DigitalVideoDisc dvd4 = new DigitalVideoDisc("The Table", "Animation", "Roger Allers", 100, 40.95f);
-		cart.addMedia(dvd4);
-		DigitalVideoDisc dvd6 = new DigitalVideoDisc("The Table 2", "Animation", "Roger Allers", 100, 40.95f);
-		cart.addMedia(dvd6);
-//		for(Media dvd:sort) {
-//			dvd.toString();
-//		}
+		mediae.add(dvd5);
+		CompactDisc CD1 = new CompactDisc("The label", "music", 30.5f);
+		mediae.add(CD1);
+		Book book1 = new Book("And then there were none.", "Ditective", 30f);
+		mediae.add(book1);
+		for(Media dvd:mediae) {
+			System.out.println(dvd.toString());
+		}
 //		cart.sortByCostTitle();
 	
 	}
