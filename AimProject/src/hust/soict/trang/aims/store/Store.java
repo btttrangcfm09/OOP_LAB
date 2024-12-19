@@ -2,7 +2,6 @@ package hust.soict.trang.aims.store;
 
 import java.util.*;
 
-import hust.soict.trang.aims.media.DigitalVideoDisc;
 import hust.soict.trang.aims.media.*;
 
 
@@ -87,5 +86,9 @@ public class Store {
         }
         return null;
     }
+	public ArrayList<Media> getItemsInStore() {
+		// TODO Auto-generated method stub
+		return itemsInStore;
+	}
 
 }
